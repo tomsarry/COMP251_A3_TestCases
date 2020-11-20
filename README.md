@@ -58,6 +58,8 @@ $ java FordFulkerson FFTest1.txt
 
 The result should match **FFRes _i_ .txt**, where **_i_** is the number of the test. For example if you run **`java FordFulkerson FFTest1.txt`** , your output should be exactly the contents of **`FFRes1.txt`**.
 
+**Note : All test files are located in the [FordFulkerson folder](https://github.com/tomsarry/COMP251_A3_TestCases/tree/main/FordFulkerson).**
+
 ### Precisions on Graphs
 
 | Graph   | Purpose of test                                               |
