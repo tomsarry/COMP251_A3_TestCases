@@ -4,10 +4,10 @@ import shutil
 from subprocess import Popen, PIPE, STDOUT
 
 _TEST_PATH = '251_tmp_tests_a3/'
-_FORD_TESTS_PATH = 'FordFulkerson/tests'
-_FORD_RES_PATH = 'FordFulkerson/res'
-_BELLMAN_TESTS_PATH = 'BellmanFord/tests'
-_BELLMAN_RES_PATH = 'BellmanFord/res'
+_TESTS = {
+'FordFulkerson' : ('FordFulkerson/tests', 'FordFulkerson/res'),
+'BellmanFord' : ('BellmanFord/tests',  'BellmanFord/res')
+}
 
 def _run_java(filename: str='', arg: str='') -> Popen:
     return Popen(
@@ -25,37 +25,22 @@ def _get_output(filename: str='', testpath: str='') -> list:
         for file in os.listdir(testpath)
         ]
 
-def bellman_ford():
-    for file in (os.listdir(_BELLMAN_RES_PATH)):
-        with open(f'{_BELLMAN_RES_PATH}/{file}') as f:
+def test(testpath: str='', respath: str='', program_name: str='') -> None:
+    for file in (os.listdir(respath)):
+        with open(f'{respath}/{file}') as f:
             expected = "".join(f.readlines())+"::"+file.replace("Res", "Test")
             print(
                 f'Test {file}: \
-                {"Pass" if (expected in _get_output("BellmanFord", _BELLMAN_TESTS_PATH)) else "Fail"}'
+                {"Pass" if (expected in _get_output(program_name, testpath)) else "Fail"}'
                 )
-
-def ford_fulkerson():    
-    for file in (os.listdir(_FORD_RES_PATH)):
-        with open(f'{_FORD_RES_PATH}/{file}') as f:
-            expected = "".join(f.readlines())+"::"+file.replace("Res", "Test")
-            print(
-                f'Test {file}: \
-                {"Pass" if (expected in _get_output("FordFulkerson", _FORD_TESTS_PATH)) else "Fail"}'
-                )
-
-def test(*argv):
-    os.system(f'javac *.java -d {_TEST_PATH}')
-    for f in argv: 
-        print(f'\nRunning Tests: {f.__name__}\n------------------------')
-        f()
 
 def main():
     if not os.path.isdir(_TEST_PATH):
         os.mkdir(_TEST_PATH)
-    test (
-        ford_fulkerson,
-        bellman_ford
-    )
+        
+    for k, v in _TESTS:
+        test(k, v[0], v[1])
+
     shutil.rmtree(_TEST_PATH)
 
 ############################################
