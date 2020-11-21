@@ -110,7 +110,7 @@ CLRS p.652:
 - Requires Python 3.6+
 - Clone the repo and put all ``.java`` source files from the assignment into the directory
 - Run ``python3 tester.py``. It runs your program on all files in the ``tests`` folders and compares the output to the files in the ``res`` folders.
-- It only checks for and output identical to the expected result, not for program correctness. 
+- It only checks for an output identical to the expected result, not for program correctness. 
 
 Example output from tester:
 ```
