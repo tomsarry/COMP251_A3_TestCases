@@ -20,7 +20,7 @@ You are more than welcome to fork this repository and add more test cases.
 
 [ ] Add tester file for pathDFS
 
-[ ] CLRS p. 728 : transcribe worst case scenario for FF
+[X] CLRS p. 728 : transcribe worst case scenario for FF
 
 [ ] Internet : Find examples of max-flow (bigger graphs)
 
@@ -69,6 +69,7 @@ The result should match **FFRes _i_ .txt**, where **_i_** is the number of the t
 | FFTest3                                                | Same file as ff2.txt (provided by instructor)                              |
 | FFTest4                                                | Same graph as FFTest3, but source is 5, target is 0 (no path)              |
 | [FFTest5](https://www.youtube.com/watch?v=Tl90tNtKvxs) | Multiple solutions (Res5-1 / [Res5-2](https://youtu.be/Tl90tNtKvxs?t=269)) |
+| FFTest6                                                | Possible worst case for the algorithm (CLRS p.728)                         |
 
 ## Question 2 : _Bellman-Ford_
 
