@@ -10,7 +10,7 @@
 
 ## Contribute
 
-You are more than welcome to fork this repository and add more test cases.
+You are more than welcome to fork this repository and add more test cases. 
 
 ---
 
@@ -43,6 +43,8 @@ $ javac FordFulkerson.java
 $ java FordFulkerson FFTest1.txt
 ```
 
+Alternatively, run the tester file ``tester.py`` with all java source files in the same directory as the tester.
+
 ### Sample output should look like:
 
 ```b
@@ -73,4 +75,57 @@ The result should match **FFRes _i_ .txt**, where **_i_** is the number of the t
 
 ## Question 2 : _Bellman-Ford_
 
-_WIP_
+### Running tests
+
+You must pass **bfTest _i_ .txt** as argument to **BellmanFord.java** to run the tests, where **_i_** is the number of the test.
+
+For example, to run the first example you should do the following :
+
+```b
+$ javac BellmanFord.java
+$ java BellmanFord bfTest1.txt
+```
+
+Alternatively, run the tester file ``tester.py`` with all java source files in the same directory as the tester.
+
+### Precisions on Graphs
+
+CLRS p.652:
+
+![clrs-bellman](https://i.imgur.com/NYSJgtu.png)
+
+
+| Test                                                   | Purpose of test                                                            |
+| ------------------------------------------------------ | -------------------------------------------------------------------------- |
+| bfTest1                                                | Provided by instructor                                                     |
+| bfTest2                                                | CLRS to node t                                                             |
+| bfTest3                                                | Negative weight cycle                                                      |
+| bfTest4                                                | CLRS to node z                                                             |
+| bfTest5                                                | BellmanFord runs, but path does not exist                                  |
+| bfTest6                                                | Single straight line path                                                  |
+
+
+## Auto tester
+
+- Requires Python 3.6+
+- Clone the repo and put all ``.java`` source files from the assignment into the directory
+- Run ``python3 tester.py``. It runs your program on all files in the ``tests`` folders and compares the output to the files in the ``res`` folders.
+
+Example output from tester:
+```
+Testing FordFulkerson:
+Test FFRes1.txt:                 Pass
+Test FFRes2.txt:                 Pass
+Test FFRes3.txt:                 Pass
+Test FFRes4.txt:                 Pass
+Test FFRes5.txt:                 Pass
+Test FFRes6.txt:                 Pass
+
+Testing BellmanFord:
+Test bfRes1.txt:                 Pass
+Test bfRes2.txt:                 Pass
+Test bfRes3.txt:                 Pass
+Test bfRes4.txt:                 Pass
+Test bfRes5.txt:                 Pass
+Test bfRes6.txt:                 Pass
+```
