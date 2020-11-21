@@ -62,12 +62,13 @@ The result should match **FFRes _i_ .txt**, where **_i_** is the number of the t
 
 ### Precisions on Graphs
 
-| Graph   | Purpose of test                                               |
-| ------- | ------------------------------------------------------------- |
-| FFTest1 | Trivial path from s to t (one iteration)                      |
-| FFTest2 | No path from s -> t                                           |
-| FFTest3 | Same file as ff2.txt (provided by instructor)                 |
-| FFTest4 | Same graph as FFTest3, but source is 5, target is 0 (no path) |
+| Graph                                                  | Purpose of test                                                            |
+| ------------------------------------------------------ | -------------------------------------------------------------------------- |
+| FFTest1                                                | Trivial path from s to t (one iteration)                                   |
+| FFTest2                                                | No path from s -> t                                                        |
+| FFTest3                                                | Same file as ff2.txt (provided by instructor)                              |
+| FFTest4                                                | Same graph as FFTest3, but source is 5, target is 0 (no path)              |
+| [FFTest5](https://www.youtube.com/watch?v=Tl90tNtKvxs) | Multiple solutions (Res5-1 / [Res5-2](https://youtu.be/Tl90tNtKvxs?t=269)) |
 
 ## Question 2 : _Bellman-Ford_
 
