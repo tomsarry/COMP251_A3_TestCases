@@ -103,6 +103,7 @@ CLRS p.652:
 | bfTest4                                                | CLRS to node z                                                             |
 | bfTest5                                                | BellmanFord runs, but path does not exist                                  |
 | bfTest6                                                | Single straight line path                                                  |
+| bfTest7                                                | Finds path where source = destination                                      |
 
 
 ## Auto tester
@@ -110,23 +111,32 @@ CLRS p.652:
 - Requires Python 3.6+
 - Clone the repo and put all ``.java`` source files from the assignment into the directory
 - Run ``python3 tester.py``. It runs your program on all files in the ``tests`` folders and compares the output to the files in the ``res`` folders.
-- It only checks for an output identical to the expected result, not for program correctness. 
+- It only checks for an output identical to the expected result, not for program correctness.
+- Pass ``v`` as a command line argument to ``tester.py`` to see more detailed results, including the expected output if a test case failed.
 
 Example output from tester:
 ```
 Testing FordFulkerson:
-Test FFRes1.txt:                 Pass
-Test FFRes2.txt:                 Pass
-Test FFRes3.txt:                 Pass
-Test FFRes4.txt:                 Pass
-Test FFRes5.txt:                 Pass
-Test FFRes6.txt:                 Pass
+--------------------------------------------
+Test FFRes1.txt:        Pass
+Test FFRes2.txt:        Pass
+Test FFRes3.txt:        Pass
+Test FFRes4.txt:        Pass
+Test FFRes5.txt:        Pass
+Test FFRes6.txt:        Pass
 
 Testing BellmanFord:
-Test bfRes1.txt:                 Pass
-Test bfRes2.txt:                 Pass
-Test bfRes3.txt:                 Pass
-Test bfRes4.txt:                 Pass
-Test bfRes5.txt:                 Pass
-Test bfRes6.txt:                 Pass
+--------------------------------------------
+Test bfRes1.txt:        Pass
+Test bfRes2.txt:        Pass
+Test bfRes3.txt:        Pass
+Test bfRes4.txt:        Pass
+Test bfRes5.txt:        Pass
+Test bfRes6.txt:        Pass
+Test bfRes7.txt:        Pass
+
+Final Results:
+--------------------------------------------
+FordFulkerson:6/6
+BellmanFord:7/7
 ```
