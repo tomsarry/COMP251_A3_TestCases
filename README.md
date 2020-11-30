@@ -79,7 +79,9 @@ The result should match **FFRes _i_ .txt**, where **_i_** is the number of the t
 
 These graphs can become computationally intensive really quickly. The paper referenced can be found here: https://ctlab.itmo.ru/~mbuzdalov/papers/cec15-flows.pdf
 
-A max-flow graph generator can be found in the [FordFulkerson folder](https://github.com/tomsarry/COMP251_A3_TestCases/tree/main/FordFulkerson). It must be compiled with the WGraph file provided by the instructors. A few tests can be found in the folder ZadehTests. 
+A max-flow graph generator can be found in the [FordFulkerson folder](https://github.com/tomsarry/COMP251_A3_TestCases/tree/main/FordFulkerson). It must be compiled with the WGraph file provided by the instructors. Usage in the command line is as follows: java MaxFlowGraphGenerator n maxWeight. The resulting graph will have 6n nodes and any the weight of any edge will be smaller or equal to maxWeight.
+
+A few tests can be found in the folder ZadehTests. 
 
 | Graph                                                  | Purpose of test                                                            |
 | ------------------------------------------------------ | -------------------------------------------------------------------------- |
