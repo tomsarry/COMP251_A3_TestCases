@@ -22,7 +22,7 @@ You are more than welcome to fork this repository and add more test cases.
 
 [X] CLRS p. 728 : transcribe worst case scenario for FF
 
-[ ] Internet : Find examples of max-flow (bigger graphs)
+[X] Internet : Find examples of max-flow (bigger graphs)
 
 ### Question 2
 
@@ -72,6 +72,21 @@ The result should match **FFRes _i_ .txt**, where **_i_** is the number of the t
 | FFTest4                                                | Same graph as FFTest3, but source is 5, target is 0 (no path)              |
 | [FFTest5](https://www.youtube.com/watch?v=Tl90tNtKvxs) | Multiple solutions (Res5-1 / [Res5-2](https://youtu.be/Tl90tNtKvxs?t=269)) |
 | FFTest6                                                | Possible worst case for the algorithm (CLRS p.728)                         |
+
+### Examples of bigger max-flow graphs
+
+![Zadeh max-flow graphs](https://i.imgur.com/LKaB85r.png)
+
+These graphs can become computationally intensive really quickly. The paper referenced can be found here: https://ctlab.itmo.ru/~mbuzdalov/papers/cec15-flows.pdf
+
+A max-flow graph generator can be found in the [FordFulkerson folder](https://github.com/tomsarry/COMP251_A3_TestCases/tree/main/FordFulkerson). It must be compiled with the WGraph file provided by the instructors. A few tests can be found in the folder ZadehTests. 
+
+| Graph                                                  | Purpose of test                                                            |
+| ------------------------------------------------------ | -------------------------------------------------------------------------- |
+| zTest1                                                 | Number of nodes = 90                                                       |
+| zTest2                                                 | Number of nodes = 150                                                      |
+| zTest3                                                 | Number of nodes = 210                                                      |
+| zTest4                                                 | Number of nodes = 300                                                      |
 
 ## Question 2 : _Bellman-Ford_
 
